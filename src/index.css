@@ -1,0 +1,511 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Make the fonts more tech font like, look up what these kinds of fonts look like */
+body{
+  font-family: Arial;
+  /* background: #090d18; */
+  /* background: black; */
+  background-image: url("./assets/bg2.png");
+  background-position: left;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+::selection {
+  color: green;
+  background-color: white;
+}
+/* ul{
+  border: 2px solid salmon;
+}
+li{
+  border: 2px solid green;
+} */
+p{
+  letter-spacing: 0;
+  /* word-spacing: 7px; */
+}
+.main-container-elements{
+  margin-bottom: 20px;
+  /* border: 2px solid salmon; */
+}
+/* ############ */
+/* CSS rules for App.jsx */
+.container{
+  /* border: 2px solid white; */
+  max-width: 70vw;
+  margin: 0 auto;
+  padding: 50px;
+  background: #222;
+  border: 2px solid #efca7f;
+  border-top: none;
+  border-bottom: none;
+}
+h1{
+  /* color: blue; */
+  /* border: 2px solid; */
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+p{
+  /* color: green; */
+  /* border: 2px solid; */
+  font-size: 13px;
+  line-height: 20px;
+}
+a{
+  /* color: green; */
+  text-underline-offset: 2px;
+  padding: 0 4px 0 4px;
+  transition: .5s;
+}
+a:link{
+  color: white;
+}
+a:visited{
+  color: white;
+}
+a:hover{
+  background-color: white;
+  color: #090d18;
+  text-decoration: none;
+  /* border-radius: 0; */
+  border-radius: 2px;
+  /* border-radius: 9999px; */
+}
+.nav-anchors{
+  padding: 0;
+}
+.nav-anchors:hover{
+  background: transparent;
+  color: white;
+}
+/* a::before{
+  content: "\00a0";
+}
+a::after{
+  content: "\00a0";
+} */
+/* content: "\00a0►"; */
+/* content: "▶️→↠⇒⇨⇾▶▷►▻◑◐≻⋀⨈⨠"; */
+/* ############ */
+/* CSS rules for Navbar.jsx */
+.navbar{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.name-section{
+  min-width: 70%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.img-section{
+  width: 100px;
+  /* height: ; */
+  border-radius: 40px;
+  background-color: transparent;
+}
+.img-section img{
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+/* ############ */
+/* Rules for the Hero Section */
+.hero{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ############ */
+/* Rules for the About Section */
+.about{
+  margin-bottom: 40px;
+}
+/* ############ */
+/* Rules for the Work Experience Section */
+.work-experience{
+  margin-bottom: 40px;
+}
+.work-experience-container, .education-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+details{
+  font-size: 20px;
+  /* border: 2px solid #990d18; */
+  /* border: 2px solid green; */
+  /* padding: 0 0 10px 0; */
+  overflow: hidden;
+  /* margin-bottom: 10px; */
+  /* padding: 3px 0; */
+}
+details:hover{
+  cursor: pointer;
+  /* background: linear-gradient(to bottom, teal, orange); */
+  background: #444;
+  border-radius: 4px;
+}
+/* instead of saying details > p, I can say details::details-content, which selects 
+the same element bc since p is the only element of details, it selects it. now if I 
+had another element besides the p tag, then it would details::details-content would 
+select them all and be more ideal*/
+details::details-content{
+  margin-left: 0px;
+  block-size: 0;
+  transition: .75s ease-out;
+  overflow-y: auto;
+}
+details[open]{
+  background: #444;
+  border-radius: 5px;
+}
+details[open]::details-content{
+  margin-left: 47px;
+  block-size: 75px;
+  /* block-size: auto; */
+}
+details[open] .summary-details-container div:first-child h5::after{
+  content: "\00a0►";
+  rotate: 90deg;
+  opacity: 1;
+}
+summary{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+}
+.summary-details-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid; */
+}
+.summary-details-container div:first-child{
+  font-size: 15px;
+  p{
+    font-size: 12px;
+  }
+}
+.summary-details-container div:first-child h5{
+  display: flex;
+  align-items: center;
+}
+.summary-details-container div:first-child h5::after{
+  transition: .5s ease-in;
+  content: "\00a0►";
+  font-size: 20px;
+  opacity: 0;
+}
+.summary-details-container div:first-child h5:hover::after{
+  opacity: 1;
+}
+.summary-details-container div:last-child{
+  font-size: 15px;
+  color: #BBB;
+}
+summary img{
+  height: 50px;
+  border-radius: 9999px;
+}
+/* ############ */
+/* Rules for the Education Section */
+.education-container{
+  margin-bottom: 40px;
+}
+.education-container details[open]::details-content{
+  block-size: 50px;
+}
+/* ############ */
+/* Rules for the Skills Section */
+.skills-container{
+  margin-bottom: 40px;
+}
+.skills-button-container{
+  margin-top: 5px;
+}
+.skills-button-container button{
+  outline: none;
+  border: none;
+  /* background: white; */
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 13px;
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-weight: bold;
+}
+.skills-button-container button:hover{
+  opacity: .8;
+}
+button.no-button-bg{
+  background: transparent;
+  outline: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.skills-btn{
+  color: white;
+  font-size: 25px;
+}
+/* ############ */
+/* Rules for the Navigation Section */
+.navigation{
+  border-radius: 9999px;
+  width: 20vw;
+  background: linear-gradient(to top, #091030, #090d18);
+  border: 1px solid #444;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+  /* rotate: 90deg; */
+  position: fixed;
+  /* top: 400px;
+  left: 80vw; */
+  bottom: 10px;
+  left: 40vw;
+}
+.nav-container{
+  display: flex;
+}
+.navigation hr{
+  display: inline;
+  font-size: 30px;
+  border-color: #444;
+}
+/* the padding here sets the space between each icon */
+.team1, .team3{
+  padding: 0 10px;
+}
+.team2{
+  display: flex;
+  gap: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nav-icons{
+  font-size: medium;
+  padding: 10px;
+  transition: .75s;
+  /* rotate: 270deg; */
+}
+.nav-icons:hover{
+  background-color: #444;
+  /* box-shadow: 0 0 25px #00a4aa; */
+  border-radius: 9999px;
+  cursor: pointer;
+  margin: 0 15px;
+}
+.navigation:hover{
+  width: 22vw;
+  left: 38vw;
+  margin-right: 100px;
+  margin-left: 10px;
+  border: 1px solid white;
+  /* rotate: 180deg; */
+}
+/* ############ */
+/* Rules for the Projects Section */
+.projects{
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.projects-container{
+  padding-top: 10px;
+  /* border: 2px saddlebrown solid; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+}
+.project-section{
+  border: 1px solid #444;
+  /* border-radius: 5px; */
+  /* border-top: 2px solid green; */
+  border-radius: 10px;
+  transition: transform .5s ease;
+}
+.project-section:hover{
+  background: #444;
+  transform: scale(1.1);
+}
+.project-img, video{
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+.project-img img, .project-img video{
+  width: 100%;
+  /* border: 2px solid purple; */
+}
+.project-content{
+  border-top: 1px solid #444;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project-description *{
+  letter-spacing: 0;
+  word-spacing: 1px;
+}
+.project-description p:last-child{
+  margin-top: 5px;
+  color: #BBB;
+}
+.project-tools{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 5px;
+  /* border: 2px solid salmon; */
+}
+.project-tools button{
+  margin-left: 0;
+  font-size: 12px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: .75s;
+}
+.project-tools button:hover{
+  color: black;
+  background: white;
+}
+/* ############ */
+/* Rules for the Get in touch/Contact Section */
+.contact{
+  margin-bottom: 20vh;
+  width: 100%;
+  max-width: 50vw;
+}
+.form-container{
+  /* background: #444; */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, .3);
+  animation: fadeIn 2s, ease-out;
+}
+/* This animation is for when you reload the page and you see the container. 
+To be fair most of the time, the user will not see this animation, but when 
+they do end up seeing it, 1 time out of 100, it will look nice*/
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h2{
+  color: white;
+}
+.form-container p{
+  margin-bottom: 15px;
+  color: #BBB;
+}
+.input-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 20px;
+}
+.input-field{
+  position: relative;
+}
+.message-field{
+  position: relative;
+  margin-top: 20px;
+}
+.contact-icons{
+  /* background-color: purple; */
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: white;
+  background-color: #091030;
+  font-size: 17px;
+}
+.message-field .contact-icons, .tag-icon{
+  top: 25px;
+}
+input, textarea{
+  width: 100%;
+  padding: 15px;
+  padding-left: 45px;
+  /* background: #091030; */
+  background: white;
+  /* border: 1px solid transparent; */
+  border: 1px solid #BBB;
+  outline: none;
+  border-radius: 5px;
+  color: #091030;
+  /* transition: all .3s ease; */
+}
+textarea{
+  resize: none;
+}
+input:focus, textarea:focus{
+  border: 1px solid #BBB;
+  box-shadow: 0 2px 10px #BBB;
+}
+.form-container button{
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform .3s ease, background-color .3s ease;
+}
+.form-container button:hover{
+  /* background-color: #DDD; */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px #999;
+}
+.button-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+@media (max-width: 600px){
+  .input-group{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
