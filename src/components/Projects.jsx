@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import RestResv from "../assets/RestaurantReservation.png";
 import LibSystem from "../assets/LibrarySystem.png";
 import Wordle from "../assets/Wordle.png";
@@ -48,7 +49,7 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Restaurant-Reservation-Application" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
@@ -74,7 +75,8 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Library-System" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
+              <button title="Online version"><a className="project-btn-anchor" href="https://tyrone21nc.github.io/LibrarySystemWeb/" target="_blank"><FontAwesomeIcon icon={faGlobe} size="xl" /></a></button>
             </div>
           </div>
         </div>
@@ -99,7 +101,7 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Resume-Builder" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
@@ -126,7 +128,7 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Password-Generator" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
@@ -151,7 +153,7 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Course-Selection-Application" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
@@ -176,7 +178,7 @@ export default function Projects() {
             </div>
 
             <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Wordle" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
@@ -201,8 +203,8 @@ export default function Projects() {
               <button>ChatGPT Prompting</button>
             </div>
 
-            <div className="project-access">
-              <button><FontAwesomeIcon icon={faGithub} size="xl" />Source</button>
+            <div className="project-access" title="I currently don't have a GitHub directory for this yet">
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc?tab=repositories" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
             </div>
           </div>
         </div>
