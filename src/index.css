@@ -404,6 +404,7 @@ button.no-button-bg{
   margin-bottom: 20vh;
   width: 100%;
   max-width: 50vw;
+  margin: auto; /* This centers it so it looks a little nicer, just get rid of it, if you prefer the original design */
 }
 .form-container{
   /* background: #444; */
@@ -439,6 +440,7 @@ h2{
 }
 .input-field{
   position: relative;
+  /* background-color: rgba(229, 137, 64); */
 }
 .message-field{
   position: relative;
@@ -450,8 +452,8 @@ h2{
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  color: white;
-  background-color: #091030;
+  color: black;
+  /* background-color: #091030; */
   font-size: 17px;
 }
 .message-field .contact-icons, .tag-icon{
@@ -462,12 +464,13 @@ input, textarea{
   padding: 15px;
   padding-left: 45px;
   /* background: #091030; */
-  background: white;
+  background: rgba(229, 137, 64);
   /* border: 1px solid transparent; */
   border: 1px solid #BBB;
   outline: none;
   border-radius: 5px;
-  color: #091030;
+  /* color: #091030; */
+  color: white;
   /* transition: all .3s ease; */
 }
 textarea{
@@ -489,8 +492,11 @@ input:focus, textarea:focus{
   cursor: pointer;
   transition: transform .3s ease, background-color .3s ease;
 }
+.form-container button{
+  background-color: rgba(229, 137, 64);
+}
 .form-container button:hover{
-  /* background-color: #DDD; */
+  background-color: white;
   transform: translateY(-4px);
   box-shadow: 0 4px 20px #999;
 }
