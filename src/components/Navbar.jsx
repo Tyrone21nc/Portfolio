@@ -1,5 +1,6 @@
 import ProfilePhoto from "../assets/profile_photo - Copy.jpg";
 import ProfilePhoto2 from "../assets/me.JPEG";
+import ProfilePhoto3 from "../assets/me_smaller.JPEG";
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
           Science. I am a aspiring Software Engineer looking to learn any chance I get.</p>
       </div>
       <div className="img-section">
-        <img src={ProfilePhoto2} alt="Romain's profile picture" />
+        <img src={ProfilePhoto3} alt="Romain's profile picture" />
       </div>
     </nav>
   );

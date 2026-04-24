@@ -111,7 +111,7 @@ a::after{
   /* justify-content: center; */
 }
 .img-section{
-  width: 100px;
+  width: 200px;
   /* height: ; */
   border-radius: 40px;
   background-color: transparent;
@@ -478,7 +478,7 @@ textarea{
 }
 input:focus, textarea:focus{
   border: 1px solid #BBB;
-  box-shadow: 0 2px 10px #BBB;
+  box-shadow: 0 2px 15px #DDD;
 }
 .form-container button{
   margin-top: 20px;
