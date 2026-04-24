@@ -20,7 +20,7 @@ export default function Navigation(){
                 <p title='github'><a href='https://www.github.com/tyrone21nc' rel="noopener" target="_blank" title='github' className='nav-anchors' ><FontAwesomeIcon icon={faGithub} size="xl" className="nav-icons" /></a></p>
                 <p title='linkedin'><a href='https://www.linkedin.com/in/romaindzeinse/' rel="noopener" target="_blank" title='linkedin' className='nav-anchors' ><FontAwesomeIcon icon={faLinkedinIn} size="xl" className="nav-icons" /></a></p>
                 <p title='projects'><a href='#projects' title="projects" className='nav-anchors' ><FontAwesomeIcon icon={faLaptopCode} size="xl" className="nav-icons" /></a></p>
-                <p title='resume'><a href={resumePDF} title="resume" className='nav-anchors' download="Romain Dzeinse Resume"><FontAwesomeIcon icon={faFilePdf} size="xl" className="nav-icons" /></a></p>
+                <p title='download resume'><a href={resumePDF} title="resume" className='nav-anchors' download="Romain Dzeinse Resume"><FontAwesomeIcon icon={faFilePdf} size="xl" className="nav-icons" /></a></p>
             </div>
             <hr />
             <div className='team3'>
