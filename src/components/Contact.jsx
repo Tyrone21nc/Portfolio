@@ -30,7 +30,7 @@ export default function Contact() {
 
             <div className="input-field">
               <FontAwesomeIcon className="contact-icons tag-icon" icon={faTag}/>
-              <input type="email" placeholder='Subject' required/>
+              <input type="text" placeholder='Subject' required/>
             </div>
 
           </div>

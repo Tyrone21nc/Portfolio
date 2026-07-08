@@ -464,7 +464,7 @@ input, textarea{
   padding: 15px;
   padding-left: 45px;
   /* background: #091030; */
-  background: rgba(229, 137, 64);
+  background: rgba(229, 137, 64, .3);
   /* border: 1px solid transparent; */
   border: 1px solid #BBB;
   outline: none;
@@ -493,10 +493,10 @@ input:focus, textarea:focus{
   transition: transform .3s ease, background-color .3s ease;
 }
 .form-container button{
-  background-color: rgba(229, 137, 64);
+  background-color: rgba(229, 137, 64, .3);
 }
 .form-container button:hover{
-  background-color: white;
+  background-color: rgba(200, 200, 200, 1);
   transform: translateY(-4px);
   box-shadow: 0 4px 20px #999;
 }
