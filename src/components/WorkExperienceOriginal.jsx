@@ -7,26 +7,43 @@ function WorkExperience(props){
 
     
 
-    // console.log(props);
+    console.log(props);
     return (
         <div className="work-experience">
             <h2 className="section-title">Work Experience</h2>
             <div className="work-experience-container">
                 <details>
                     <summary>
-                        <img src={props.imgSrc} alt={props.altText} />
+                        <img src={PongosLearningLabLogo} alt="Pongos Learning Lab logo" />
                         <div className="summary-details-container">
                             <div>
-                                <h5>{props.companyName}  ({props.location})</h5>
-                                <p>{props.position}</p>
+                                <h5>Pongos Learning Lab  (Crofton, MD)</h5>
+                                <p>Intructor Intern</p>
                             </div>
                             <div>
-                                <p><span>{props.fromMonth} {props.fromYear}</span> - <span>{props.toMonth} {props.toYear}</span></p>
+                                <p><span>Aug 2022</span> - <span>Aug 2022</span></p>
                             </div>
                         </div>
                     </summary>
                     <p>
-                        <ul dangerouslySetInnerHTML={{ __html: props.description }}/>
+                        <ul>
+                            <li>
+                                <p>
+                                    As an Instructor intern, I was in charge of helping the kids have an educational and fun experience while learning STEM
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    I helped children program <a href="https://store.makewonder.com/products/dash?srsltid=AfmBOooHixAr1B7Du657HcpZkoUjo5-SXYukmTWFhjWr6LpP00SadYQI" rel="noopener" target="_blank">
+                                    Dash Coding Robots</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    I also taught a STEAM topics, including art projects, minecraft server building and motion pictures (videos) creation
+                                </p>
+                            </li>
+                        </ul>
                     </p>
                 </details>
                 <details id="pongos-LL-exp">
