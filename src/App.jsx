@@ -27,10 +27,10 @@ export default function App() {
   // and move the skills section right above your about section
   // Add school orgs that I am a part of for the schools I have attended
 
-  const highSchool = {
+  const school1 = {
 
   };
-  const university = {
+  const school2 = {
 
   };
   const work1 = {
@@ -55,15 +55,16 @@ export default function App() {
     </p></li>`
   };
   const work2 = {
-    companyName: "Pongos Learning Lab",
-    altText: "Pongos Learning Lab logo",
-    imgSrc: PongosLearningLabLogo,
-    location: "Crofton, MD",
-    position: "Instructor Intern",
-    fromMonth: "Aug",
-    fromYear: "2022",
+    companyName: "CHOYCES",
+    altText: " CHOYCES logo",
+    imgSrc: CHOYCESLogo,
+    location: "Remote",
+    position: "IT Intern",
+    fromMonth: "Jul",
+    fromYear: "2024",
     toMonth: "Aug",
-    toYear: "2022",
+    toYear: "2024",
+    description: "Technical software support for issues encountered by users. Managed the operation of the Operating System, including the storage and drive. Installed and tested software. I also worked with the set up of user and profile accounts and assisted with troubleshooting issues."
   };
 
 
@@ -77,8 +78,9 @@ export default function App() {
       <div className="main-container-elements"><About /></div>
 
       <div className="main-container-elements">
+        <h2>Work Experience</h2>
         <WorkExperience companyName={work1.companyName} altText={work1.altText} imgSrc={work1.imgSrc} location={work1.location} position={work1.position} fromMonth={work1.fromMonth} fromYear={work1.fromYear} toMonth={work1.toMonth} toYear={work1.toYear} description={work1.description} />
-
+        <WorkExperience companyName={work2.companyName} altText={work2.altText} imgSrc={work2.imgSrc} location={work2.location} position={work2.position} fromMonth={work2.fromMonth} fromYear={work2.fromYear} toMonth={work2.toMonth} toYear={work2.toYear} description={work2.description} />
       </div>
 
       <div className="main-container-elements"><Education /></div>

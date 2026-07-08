@@ -10,7 +10,6 @@ function WorkExperience(props){
     // console.log(props);
     return (
         <div className="work-experience">
-            <h2 className="section-title">Work Experience</h2>
             <div className="work-experience-container">
                 <details>
                     <summary>
@@ -27,25 +26,6 @@ function WorkExperience(props){
                     </summary>
                     <p>
                         <ul dangerouslySetInnerHTML={{ __html: props.description }}/>
-                    </p>
-                </details>
-                <details id="pongos-LL-exp">
-                    <summary>
-                        <img src={CHOYCESLogo} alt="Pongos Learning Lab logo" />
-                        <div className="summary-details-container">
-                            <div>
-                                <h5>CHOYCES (Remote)</h5>
-                                <p>IT Intern</p>
-                            </div>
-                            <div>
-                                <p><span>Jul 2024</span> - <span>Aug 2024</span></p>
-                            </div>
-                        </div>
-                    </summary>
-                    <p>
-                        Technical software support for issues encountered by users. Managed the operation of the Operating System, including the 
-                        storage and drive. Installed and tested software. I also worked with the set up of user and profile accounts and 
-                        assisted with troubleshooting issues. 
                     </p>
                 </details>
             </div>
