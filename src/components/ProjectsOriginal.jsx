@@ -21,31 +21,36 @@ const projects = [
   }
 ];
 
-export default function Projects(props) {
+export default function Projects() {
   return (
     <div className='projects' id='projects'>
+      <h2 className="section-title">Projects</h2>
       <h4>A gallery of my latest projects</h4>
       <div className="projects-container">
 
         <div className="project-section">
           <div className="project-img">
-            <img src={props.imgSrc} alt={props.altText} className='project-img' />
+            <img src={RestResv} alt="Restaurant Reservation Picture of GitHub code" className='project-img' />
           </div>
 
           <div className="project-content">
             <div className="project-description">
-              <h4>{props.projectName}</h4>
-              <p>{props.fromMonth} {props.fromYear} - {props.toMonth} {props.toYear}</p>
-              <p>{props.description}</p>
+              <h4>Restaurant Reservation Application</h4>
+              <p>Dec 2025 - Jan 2026</p>
+              <p>This application allows users to reserve a table at a restaurant. It allows for features including 
+                the viewing of all current tables, view which ones are currently reserved and still get on the 
+                waitlist for those tables. Once a user gets in the system, they can claim their reserved spot.
+              </p>
             </div>
             <div className="project-tools">
-              <p dangerouslySetInnerHTML={{ __html: props.tools }} />
+              <button>C++</button>
+              <button>Thread</button>
+              <button>Chrono</button>
             </div>
 
             <div className="project-access">
-              <button><a className="project-btn-anchor" href={props.githubLink} target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
-              <p dangerouslySetInnerHTML={{ __html: props.liveLink }} />
-            </div>  
+              <button><a className="project-btn-anchor" href="https://github.com/Tyrone21nc/Restaurant-Reservation-Application" target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
+            </div>
           </div>
         </div>
 
@@ -207,7 +212,7 @@ export default function Projects(props) {
 
       </div>
 
-      {/* <p>Discover more projects on my github</p> */}
+      <p>Discover more projects on my github</p>
 
       {/* {projects.map((project, index) => (
         <div key={index}>

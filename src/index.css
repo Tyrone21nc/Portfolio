@@ -138,7 +138,7 @@ a::after{
 /* ############ */
 /* Rules for the Work Experience Section */
 .work-experience{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .work-experience-container, .education-container{
   display: flex;
@@ -228,7 +228,7 @@ summary img{
 /* ############ */
 /* Rules for the Education Section */
 .education-container{
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 .education-container details[open]::details-content{
   block-size: 50px;

@@ -11,7 +11,7 @@ export default function Navbar() {
           Science. I am a aspiring Software Engineer looking to learn any chance I get.</p>
       </div>
       <div className="img-section">
-        <img src={ProfilePhoto3} alt="Romain's profile picture" />
+        <img src={ProfilePhoto} alt="Romain's profile picture" />
       </div>
     </nav>
   );
