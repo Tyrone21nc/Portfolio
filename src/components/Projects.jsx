@@ -28,9 +28,15 @@ export default function Projects(props) {
       <div className="">
 
         <div className="project-section">
-          <div className="project-img">
-            <img src={props.imgSrc} alt={props.altText} className='project-img' />
-          </div>
+          {props.projectName == "Password Saver" ? (
+            <video autoPlay loop muted playsInline>
+              <source src={props.imgSrc} type="video/mp4" alt={props.altText} />
+            </video>)
+            : (
+            <div className="project-img">
+              <img src={props.imgSrc} alt={props.altText} className='project-img' />
+            </div>)  
+          }
 
           <div className="project-content">
             <div className="project-description">
