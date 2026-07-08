@@ -36,7 +36,7 @@ export default function Education(){
                         </div>
                     </summary>
                     <p>
-                        I am currently in my third year at UMBC working towards my <u>BS in Computer Science</u>.
+                        I will be entering my senior year at UMBC, working towards my <u>BS in Computer Science</u>.
                     </p>
                 </details>
             </div>
