@@ -182,7 +182,7 @@ export default function App() {
   const project6 = {
     projectName: "Wordle",
     imgSrc: Wordle,
-    altText: "Wordle",
+    altText: "Wordle image",
     fromMonth: "Jan",
     fromYear: "2024",
     toMonth: "Jul",
@@ -195,12 +195,6 @@ export default function App() {
     githubLink: "https://github.com/Tyrone21nc/Wordle",
     liveLink: ""
   };
-  const project7 = {
-    projectName: "Google Cloud Services",
-    imgSrc: GoogleCloudServices,
-
-  };
-
 
 
   return (
