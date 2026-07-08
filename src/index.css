@@ -333,7 +333,7 @@ button.no-button-bg{
 }
 .projects-container{
   padding-top: 10px;
-  /* border: 2px saddlebrown solid; */
+  border: 2px saddlebrown solid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;

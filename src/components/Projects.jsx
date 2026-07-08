@@ -24,8 +24,8 @@ const projects = [
 export default function Projects(props) {
   return (
     <div className='projects' id='projects'>
-      <h4>A gallery of my latest projects</h4>
-      <div className="projects-container">
+      {/* <h4>A gallery of my latest projects</h4> */}
+      <div className="">
 
         <div className="project-section">
           <div className="project-img">
@@ -44,21 +44,18 @@ export default function Projects(props) {
 
             <div className="project-access">
               <button><a className="project-btn-anchor" href={props.githubLink} target="_blank"><FontAwesomeIcon icon={faGithub} size="xl" />Source</a></button>
-              <p dangerouslySetInnerHTML={{ __html: props.liveLink }} />
+              {props.liveLink ? (
+                <button title="Online version">
+                  <a className="project-btn-anchor" href={props.liveLink} target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon icon={faGlobe} size="xl" />
+                  </a>
+                </button>
+              ) : null}
             </div>  
           </div>
         </div>
 
       </div>
-
-      {/* <p>Discover more projects on my github</p> */}
-
-      {/* {projects.map((project, index) => (
-        <div key={index}>
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
-        </div>
-      ))} */}
     </div>
   );
 }

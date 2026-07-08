@@ -221,8 +221,15 @@ export default function App() {
 
       <div className="main-container-elements">
         <h2 className="section-title">Projects</h2>
-        <Projects projectName={project1.projectName} imgSrc={project1.imgSrc} altText={project1.altText} fromMonth={project1.fromMonth} fromYear={project1.fromYear} toMonth={project1.toMonth} toYear={project1.toYear} description={project1.description} tools={project1.tools} githubLink={project1.githubLink} />
-        <Projects projectName={project2.projectName} imgSrc={project2.imgSrc} altText={project2.altText} fromMonth={project2.fromMonth} fromYear={project2.fromYear} toMonth={project2.toMonth} toYear={project2.toYear} description={project2.description} tools={project2.tools} githubLink={project2.githubLink} liveLink={project2.liveLink}/>
+        <h4>A gallery of my latest projects</h4>
+        <div className="projects-container">
+          <Projects projectName={project1.projectName} imgSrc={project1.imgSrc} altText={project1.altText} fromMonth={project1.fromMonth} fromYear={project1.fromYear} toMonth={project1.toMonth} toYear={project1.toYear} description={project1.description} tools={project1.tools} githubLink={project1.githubLink} />
+          <Projects projectName={project2.projectName} imgSrc={project2.imgSrc} altText={project2.altText} fromMonth={project2.fromMonth} fromYear={project2.fromYear} toMonth={project2.toMonth} toYear={project2.toYear} description={project2.description} tools={project2.tools} githubLink={project2.githubLink} liveLink={project2.liveLink}/>
+          <Projects projectName={project3.projectName} imgSrc={project3.imgSrc} altText={project3.altText} fromMonth={project3.fromMonth} fromYear={project3.fromYear} toMonth={project3.toMonth} toYear={project3.toYear} description={project3.description} tools={project3.tools} githubLink={project3.githubLink} />
+          <Projects projectName={project4.projectName} imgSrc={project4.imgSrc} altText={project4.altText} fromMonth={project4.fromMonth} fromYear={project4.fromYear} toMonth={project4.toMonth} toYear={project4.toYear} description={project4.description} tools={project4.tools} githubLink={project4.githubLink} />
+          <Projects projectName={project5.projectName} imgSrc={project5.imgSrc} altText={project5.altText} fromMonth={project5.fromMonth} fromYear={project5.fromYear} toMonth={project5.toMonth} toYear={project5.toYear} description={project5.description} tools={project5.tools} githubLink={project5.githubLink} />
+          <Projects projectName={project6.projectName} imgSrc={project6.imgSrc} altText={project6.altText} fromMonth={project6.fromMonth} fromYear={project6.fromYear} toMonth={project6.toMonth} toYear={project6.toYear} description={project6.description} tools={project6.tools} githubLink={project6.githubLink} />
+        </div>
 
       </div>
 
