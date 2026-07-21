@@ -128,9 +128,7 @@ export default function App() {
       <button>JS</button>
     `,
     githubLink: "https://github.com/Tyrone21nc/Library-System",
-    liveLink: `
-      "https://tyrone21nc.github.io/LibrarySystemWeb/"
-      `
+    liveLink: "https://tyrone21nc.github.io/LibrarySystemWeb/"
     // liveLink: `
     //   <button title="Online version"><a className="project-btn-anchor" href="https://tyrone21nc.github.io/LibrarySystemWeb/" target="_blank"><FontAwesomeIcon icon={faGlobe} size="xl" /></a></button>
     //   `
