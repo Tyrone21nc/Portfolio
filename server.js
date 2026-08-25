@@ -26,12 +26,13 @@ app.post("/api/contact", async (req, res) => {
       replyTo: email,
       subject: subject,
       text: `
-            Name: ${name}
-            Email: ${email}
-            Phone: ${phone}
+            <h1>Message:</h1>
+            <p>${message}</p>
 
-            Message:
-            ${message}
+            
+            <h2>Name: ${name}</h2>
+            <h2>Email: ${email}</h2>
+            <h2>Phone: ${phone}</h2>
         `,
     });
 
