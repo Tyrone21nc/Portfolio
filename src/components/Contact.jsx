@@ -3,6 +3,53 @@ import { faEnvelope, faMessage, faPaperPlane, faPhone, faTag, faUser } from "@fo
 
 
 export default function Contact() {
+
+  // this records the form data for the name, email, ..., and msg
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const handlaChange = (e) => {
+    setForm({
+      ...form, 
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    const response = await fetch("https://localhost:5174/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form.message),
+    });
+
+    const data = await response.json();
+
+    // if the data was sent, let the user know and set the form back to blank
+    if (data.success){
+      alert("Message sent!"); // let the user know
+      // set the form to blank again
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    }
+    // if the msg didn't send, let the user know
+    else{
+      alert("Message failed to send. Try again later."); // let the user know
+    }
+  };
+
+
+
+
   return (
     // also known as container
     <div className="contact" id='contact'>
@@ -11,34 +58,33 @@ export default function Contact() {
         <h2 className="section-title">Get in touch</h2>
         <p>Fill out the form below to send me an email</p>
         
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
             <div className="input-field">
               <FontAwesomeIcon className="contact-icons" icon={faUser}/>
-              <input type="text" placeholder='John Doe' required/>
+              <input name="name" type="text" placeholder='John Doe' value={form.name} onChange={handleChange} required/>
             </div>
 
             <div className="input-field">
               <FontAwesomeIcon className="contact-icons" icon={faEnvelope}/>
-              <input type="email" placeholder='jdoe@somemail.com' required/>
+              <input name="email" type="email" placeholder='jdoe@somemail.com' value={form.email} onChange={handleChange} required/>
             </div>
 
             <div className="input-field">
               <FontAwesomeIcon className="contact-icons" icon={faPhone}/>
-              <input type="tel" placeholder='123-456-7890 (optional)'/>
+              <input name="phone" type="tel" placeholder='123-456-7890 (optional)' value={form.phone} onChange={handleChange}/>
             </div>
 
             <div className="input-field">
               <FontAwesomeIcon className="contact-icons tag-icon" icon={faTag}/>
-              <input type="text" placeholder='Subject' required/>
+              <input name="subject" type="text" placeholder='Subject' value={form.subject} onChange={handleChange} required/>
             </div>
-
           </div>
 
           
             <div className="message-field">
               <FontAwesomeIcon className="contact-icons" icon={faMessage}/>
-              <textarea type="text" rows={5} placeholder='Your Message' required/>
+              <textarea name="message" type="text" rows={5} placeholder='Your Message' value={form.message} onChange={handleChange} required/>
             </div>
 
             <button type="submit">
