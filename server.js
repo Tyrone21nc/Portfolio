@@ -25,15 +25,17 @@ app.post("/api/contact", async (req, res) => {
       to: process.env.GMAIL_USER,
       replyTo: email,
       subject: subject,
-      text: `
-            <h1>Message:</h1>
-            <p>${message}</p>
-
-            
-            <h2>Name: ${name}</h2>
-            <h2>Email: ${email}</h2>
-            <h2>Phone: ${phone}</h2>
-        `,
+      html: `
+        <h1>Message:</h1>
+        <p>${message}</p>
+        <br>
+        <br>
+        <br>
+        <em>Sincerely,<br>
+        ${name}<br>
+        ${email}<br>
+        ${phone}<br></em>
+      `,
     });
 
     res.json({ success: true });
