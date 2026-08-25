@@ -7,7 +7,6 @@ import About from "./components/About.jsx"; // whether I include .jsx or not, Re
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
-import C from "./components/C.jsx";
 
 // img URL used as props
 import PongosLearningLabLogo from "./assets/PongosLearningLabLogo.webp";
@@ -237,8 +236,6 @@ export default function App() {
 
 
       
-
-      <div className="main-container-elements"><C /></div>
 
       <div className="main-container-elements"><Contact /></div>
       <div className="navigation"><Navigation /></div>

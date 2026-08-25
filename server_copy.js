@@ -17,22 +17,21 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/api/contact", async (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
+  const { name, email, message } = req.body;
 
   try {
     await transporter.sendMail({
-      from: email,
+      from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
       replyTo: email,
-      subject: subject,
+      subject: `Portfolio Contact: ${name}`,
       text: `
-            Name: ${name}
-            Email: ${email}
-            Phone: ${phone}
+Name: ${name}
+Email: ${email}
 
-            Message:
-            ${message}
-        `,
+Message:
+${message}
+      `,
     });
 
     res.json({ success: true });

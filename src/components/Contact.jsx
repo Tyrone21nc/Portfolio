@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMessage, faPaperPlane, faPhone, faTag, faUser } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 
 export default function Contact() {
@@ -12,19 +13,20 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  const handlaChange = (e) => {
+  const handleChange = (e) => {
     setForm({
       ...form, 
       [e.target.name]: e.target.value,
     });
   };
   const handleSubmit = async (e) => {
-    const response = await fetch("https://localhost:5174/api/contact", {
+    e.preventDefault();
+    const response = await fetch("http://localhost:5174/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form.message),
+      body: JSON.stringify(form),
     });
 
     const data = await response.json();
@@ -43,7 +45,7 @@ export default function Contact() {
     }
     // if the msg didn't send, let the user know
     else{
-      alert("Message failed to send. Try again later."); // let the user know
+      alert("Message failed to send. Please try again later."); // let the user know
     }
   };
 

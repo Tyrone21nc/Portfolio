@@ -18,7 +18,7 @@ function Contact() {
     e.preventDefault();
 
     // this url below is the API endpoint and is for the backend
-    const response = await fetch("http://localhost:5174/api/contact", {
+    const response = await fetch("http://localhost:5175/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
